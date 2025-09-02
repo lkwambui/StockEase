@@ -7,7 +7,7 @@ function Footer() {
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <div>
-          <h2 className="text-2xl font-semibold">InventoryPro</h2>
+          <h2 className="text-2xl font-semibold">StockEase</h2>
           <p className="text-gray-300 mt-2">Efficient Inventory Management, Simplified.</p>
           <p className="text-sm text-gray-400 mt-4">© {new Date().getFullYear()} InventoryPro. All rights reserved.</p>
         </div>
