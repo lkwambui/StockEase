@@ -1,63 +1,83 @@
-# 📦 Inventory Management System (MERN Stack)
+# 📦 StockEase: E-Commerce Inventory Management System
 
-A full-stack Inventory Management System built with the MERN stack (MongoDB, Express.js, React.js, Node.js). This application allows users to manage products, track stock levels, handle sales and orders, update in real-time using WebSockets, and maintain user profiles.
+**StockEase** is a MERN-based inventory management system designed for small and medium-sized e-commerce businesses.  
+It provides real-time stock tracking, supplier management, order processing, sales analytics, and low-stock alerts.  
+This project is part of my **Bachelor of Information Technology** program at **Mount Kenya University**.
 
 ---
 
 ## 🚀 Features
-
-### ✅ Core Functionalities
-- 🔄 **Real-Time Data Sync** via WebSockets (Socket.IO)
-- 📦 **Product Management**: Add, edit, delete, and view products with categories and stock tracking
-- 🧾 **Order Management**: Create and manage customer orders
-- 💰 **Sales Tracking**: View daily/weekly/monthly sales and revenue
-- 📊 **Stock Monitoring**: Low-stock alerts, live inventory levels
-- 👤 **User Profile Pages**: Update profile info, view activity and role
-- 🔐 **Authentication & Authorization**: Secure login, JWT-based auth, admin vs staff roles
-- 📈 **Dashboard Analytics**: Key performance indicators (KPIs), charts, and summaries
+- 🔑 **Authentication & User Roles** → Secure login for Admin and Staff
+- 📦 **Inventory Management** → Add, edit, delete, and track products in real-time
+- ⚠️ **Low-Stock Alerts** → Notifications for critical stock levels
+- 🛒 **Order Management** → Manage pending, completed, or canceled orders
+- 🏭 **Supplier Management** → Store supplier details and link them to products
+- 📊 **Sales Analytics & Reports** → Visual dashboards and downloadable reports
+- 📱 **Responsive Design** → Optimized for both desktop and mobile
 
 ---
 
-## 🧰 Tech Stack
-
-| Tech             | Description                       |
-|------------------|-----------------------------------|
-| MongoDB          | NoSQL database                    |
-| Express.js       | Backend framework for Node.js     |
-| React.js         | Frontend UI library               |
-| Node.js          | Backend runtime                   |
-| Socket.IO        | Real-time communication           |
-| Mongoose         | ODM for MongoDB                   |
-| Redux Toolkit    | State management on frontend      |
-| Tailwind CSS     | Modern, utility-first CSS         |
-| JWT              | Authentication & session management |
+## 🛠️ Tech Stack
+- **Frontend** → React.js, Redux Toolkit, Tailwind CSS  
+- **Backend** → Node.js, Express.js  
+- **Database** → MongoDB (Atlas or local)  
+- **Other Tools** → JWT Authentication, Socket.IO, Chart.js/Recharts  
 
 ---
-## 📦 Installation
 
-### 1. Clone the repo
+## 📂 Project Structure
+StockEase/
+├── backend/ # Node.js + Express API
+│ ├── models/ # MongoDB schemas
+│ ├── routes/ # API routes
+│ ├── controllers/# Business logic
+│ └── ...
+│
+├── frontend/ # React + Tailwind client app
+│ ├── src/
+│ ├── public/
+│ └── ...
+│
+├── README.md # Project documentation
+└── ...
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/inventory-management-mern.git
-cd inventory-management-mern
-```
-```
-# Backend
-cd server
-npm install
-```
-```
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/inventory
-JWT_SECRET=your_jwt_secret
+git clone https://github.com/lkwambui/StockEase.git
+cd StockEase
 
-```
-```
-cd ../client
-npm install
-```
+2. Backend Setup
 
-```
-# Backend
-cd server
-npm run dev
-```
+cd backend
+npm install
+cp .env.example .env   # add MongoDB URI and JWT secret
+npm start
+
+3. Frontend Setup
+
+cd ../frontend
+npm install
+cp .env.example .env   # add API base URL (e.g., http://localhost:5000)
+npm start
+
+Roadmap / Progress
+
+ Project Setup (MERN stack)
+
+ Authentication & Role Management
+
+ Inventory CRUD Module
+
+ Stock Alerts & Notifications
+
+ Supplier & Order Management
+
+ Sales Analytics & Reports
+
+ Testing & Debugging
+
+ Deployment (Vercel/Render + MongoDB Atlas)
